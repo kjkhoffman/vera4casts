@@ -15,19 +15,19 @@ model_id <- 'secchi_last3obs_mean'
 
 # this should generate a df
 #for multiple sites!
-# site <- c('fcre', 'bvre')
+ site <- c('fcre', 'bvre')
 #
-# forecast <- site |>
-#     map(generate_secchi_forecast,
-#         forecast_date = forecast_date,
-#         model_id = model_id,
-#         targets_url = "https://amnh1.osn.mghpcc.org/bio230121-bucket01/vera4cast/targets/project_id=vera4cast/duration=P1D/daily-insitu-targets.csv.gz") |>
-#     list_rbind()
+ forecast <- site |>
+     map(generate_secchi_forecast,
+         forecast_date = forecast_date,
+         model_id = model_id,
+         targets_url = "https://amnh1.osn.mghpcc.org/bio230121-bucket01/vera4cast/targets/project_id=vera4cast/duration=P1D/daily-insitu-targets.csv.gz") |>
+     list_rbind()
 
-forecast <- generate_secchi_forecast(forecast_date = forecast_date,
-                                      model_id = model_id,
-                                      targets_url = "https://amnh1.osn.mghpcc.org/bio230121-bucket01/vera4cast/targets/project_id=vera4cast/duration=P1D/daily-insitu-targets.csv.gz",
-                                      site = c('fcre', 'bvre'))
+#forecast <- generate_secchi_forecast(forecast_date = forecast_date,
+#                                      model_id = model_id,
+#                                      targets_url = "https://amnh1.osn.mghpcc.org/bio230121-bucket01/vera4cast/targets/project_id=vera4cast/duration=P1D/daily-insitu-targets.csv.gz",
+#                                      site = c('fcre', 'bvre'))
 #----------------------------------------#
 
 # write forecast locally
