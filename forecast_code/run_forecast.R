@@ -17,7 +17,7 @@ model_id <- 'TempC_mean_example_forecast'
 # this should generate a df
 forecast <- generate_example_forecast(forecast_date = forecast_date,
                                       model_id = model_id,
-                                      targets_url = "https://renc.osn.xsede.org/bio230121-bucket01/vera4cast/targets/project_id=vera4cast/duration=P1D/daily-insitu-targets.csv.gz",
+                                      targets_url = "https://amnh1.osn.mghpcc.org/bio230121-bucket01/vera4cast/targets/project_id=vera4cast/duration=P1D/daily-insitu-targets.csv.gz",
                                       var = 'Temp_C_mean',
                                       site = 'fcre',
                                       forecast_depths = 'focal')
